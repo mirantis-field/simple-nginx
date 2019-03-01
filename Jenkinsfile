@@ -82,7 +82,7 @@ node {
             if (!scan_result.check_completed_at.equals("0001-01-01T00:00:00Z")) {
                 scanning = false
             } else {
-                sleep 1
+                sleep 10
             }
 
         }

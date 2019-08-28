@@ -50,7 +50,7 @@ $ ./stage-images.sh
 1. Add the `library.yaml` local repository to the `docker template` settings
 
 ### Linux 
-1. On your computer, open `~/.docker/dockertemplate/preferences.yaml`
+1. On your computer, open `~/.docker/application-template/preferences.yaml`
 1. Add the local repository as the first item in the repositories list:
 ```
 repositories:

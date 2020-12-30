@@ -1,4 +1,4 @@
-# Simple NGINX
+# Simple NGINX -test
 Simple NGINX is a fairly simple, static website running on NGINX to demonstrating NGINX in a Docker container.
 
 ## Building from Scratch

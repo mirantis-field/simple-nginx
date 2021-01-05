@@ -4,7 +4,7 @@ IMAGE_REPOSITORY = "simple-nginx"
 TARGET_CLUSTER_DOMAIN = "us.demo.mirantis.com"
 
 // Available orchestrators = [ "kubernetes" | "swarm" ]
-ORCHESTRATOR = "kubernetes"
+ORCHESTRATOR = "swarm"
 
 // Available ingress = [ "ingress" | "istio_gateway" ]
 KUBERNETES_INGRESS = "ingress"

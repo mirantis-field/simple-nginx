@@ -4,7 +4,7 @@ metadata:
   name: simple-nginx
 spec:
   hosts:
-    - ${DOCKER_APPLICATION_FQDN}
+    - ${APPLICATION_FQDN}
   gateways:
     - istio-system/demo-gateway
   http:

@@ -12,6 +12,15 @@ spec:
       labels:
         app: simple-nginx
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/os
+                    operator: In
+                    values:
+                      - linux
       containers:
         - name: simple-nginx-fe
           image: dtr.eu.demo.mirantis.com/ayang-prod/simple-nginx:latest

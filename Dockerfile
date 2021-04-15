@@ -4,7 +4,7 @@ FROM nginx:1.19.10-alpine
 
 RUN apk update
 
-RUN apk -i upgrade
+RUN apk upgrade
 
 COPY html /usr/share/nginx/html
 

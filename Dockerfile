@@ -2,6 +2,10 @@
 # https://hub.docker.com/_/nginx/
 FROM nginx:1.19.10-alpine
 
+RUN apk update
+
+RUN apk -i upgrade
+
 COPY html /usr/share/nginx/html
 
 HEALTHCHECK --interval=5s --timeout=5s CMD wget -q -O - -U "healthcheck" http://localhost:80/ || exit 1

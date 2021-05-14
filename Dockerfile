@@ -1,11 +1,14 @@
-FROM python:3.6-alpine
+# Base image from Docker Hub: 
+# https://hub.docker.com/_/nginx/
+FROM nginx:1.17.8-alpine
 
-ENV FLASK_APP run.py
+COPY html /usr/share/nginx/html
 
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+HEALTHCHECK --interval=5s --timeout=5s CMD wget -q -O - -U "healthcheck" http://localhost:80/ || exit 1
 
-COPY . .
+# The following lines are inherited from nginx base image:
+# https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile
+##########################################################
+#EXPOSE 80
 
-EXPOSE 5005
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]
+#CMD ["nginx", "-g", "daemon off;"]

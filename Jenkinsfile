@@ -1,14 +1,14 @@
 IMAGE_REPOSITORY = "simple-nginx"
 
 // For available target clusters, contact your platform administrator
-TARGET_CLUSTER_DOMAIN = "eu.demo.mirantis.com"
+TARGET_CLUSTER_DOMAIN = "us.demo.mirantis.com"
 
 // Available orchestrators = [ "kubernetes" | "swarm" ]
-ORCHESTRATOR = "swarm"
+ORCHESTRATOR = "kubernetes"
 // edit for demo purposes
 
 // Available ingress = [ "ingress" | "istio_gateway" ]
-KUBERNETES_INGRESS = "ingress"
+KUBERNETES_INGRESS = "istio_gateway"
 
 if(! CLUSTER.containsKey(TARGET_CLUSTER_DOMAIN)){
     error("Unknown cluster '${TARGET_CLUSTER_DOMAIN}'")

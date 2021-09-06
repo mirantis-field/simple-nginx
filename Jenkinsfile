@@ -1,6 +1,6 @@
 IMAGE_REPOSITORY = "simple-nginx"
 
-// For available target clusters, contact your platform administrator
+// For available target clusters, contact your platform administrator, it is possible to use eu.demo.mirantis.com with istio_gateway
 TARGET_CLUSTER_DOMAIN = "us.demo.mirantis.com"
 
 // Available orchestrators = [ "kubernetes" | "swarm" ]

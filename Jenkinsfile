@@ -44,7 +44,9 @@ node {
     }
 
     stage('Build') {
-        docker_image = docker.build("${IMAGE_NAMESPACE_DEV}/${IMAGE_REPOSITORY}")
+        // wsoualhi-dev/simple-nginx 
+        //docker_image = docker.build("${IMAGE_NAMESPACE_DEV}/${IMAGE_REPOSITORY}")
+        docker_image = docker.build("wsoualhi-dev/simple-nginx")
     }
 
     stage('Unit Tests') {

@@ -98,7 +98,8 @@ node {
                 sh 'docker trust key load ${TRUST_SIGNER_KEY}'
                 sh 'docker trust sign ${REGISTRY_HOSTNAME}/${IMAGE_NAMESPACE}/${IMAGE_REPOSITORY}:${IMAGE_TAG}'
                 println (TARGET_CLUSTER['TRUST_SIGNER_PASSPHRASE_CREDENTIALS_ID'])
-                println ('DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE')
+                // com.mirantis.demo.us-jenkins_signing_signer-passphrase
+                println (DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE)
             }
         }
     }

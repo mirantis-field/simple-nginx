@@ -4,7 +4,7 @@ metadata:
   name: simple-nginx
 spec:
   rules:
-    - host: "54.71.1.45"
+    - host: ${APPLICATION_FQDN}
       http:
         paths:
           - backend:
